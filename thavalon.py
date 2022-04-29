@@ -2,6 +2,10 @@ import discord
 from discord.ext import commands
 from game import *
 from discord_components import DiscordComponents, Button, ButtonStyle
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 client = discord.Client()
 
@@ -101,6 +105,6 @@ async def on_button_click(interaction):
 
     
 
-bot.run('OTY5NjkzMjM0MTQ0MTAwNDM0.YmxHMw.Smladq8dWp1kyj1IkgJjT-MH5sk')
+bot.run(os.getenv("TOKEN"))
     
     
